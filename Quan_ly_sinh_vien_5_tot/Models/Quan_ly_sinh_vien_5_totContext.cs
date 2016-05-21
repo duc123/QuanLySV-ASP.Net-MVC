@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -22,6 +23,18 @@ namespace Quan_ly_sinh_vien_5_tot.Models
         public System.Data.Entity.DbSet<Quan_ly_sinh_vien_5_tot.Models.SinhVien> SinhViens { get; set; }
 
         public System.Data.Entity.DbSet<Quan_ly_sinh_vien_5_tot.Models.Lop> Lops { get; set; }
+
+        public void ThemSinhVien(string MaLop,string MSSV, string Ho,string Ten,DateTime NgaySinh) {
+            SqlParameter[] param = {
+                new SqlParameter("@MaLop",MaLop),
+                new SqlParameter("@MSSV",MSSV),
+                new SqlParameter("@Ho",Ho),
+                new SqlParameter("@Ten",Ten),
+                new SqlParameter("@NgaySinh",NgaySinh)
+            };
+
+            this.Database.SqlQuery<SinhVien>("ThemSinhVien", param);
+        }
     
     }
 }

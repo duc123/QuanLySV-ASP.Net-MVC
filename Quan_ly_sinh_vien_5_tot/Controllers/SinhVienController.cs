@@ -52,8 +52,10 @@ namespace Quan_ly_sinh_vien_5_tot.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.SinhViens.Add(sinhvien);
-                db.SaveChanges();
+                
+                //db.SinhViens.Add(sinhvien);
+                //db.SaveChanges();
+                db.ThemSinhVien(sinhvien.Lop.MaLop,sinhvien.MSSV,sinhvien.Ho,sinhvien.Ten,sinhvien.NgaySinh);
                 return RedirectToAction("Index");
             }
 
