@@ -169,6 +169,7 @@
     <Compile Include="Models\Lop.cs" />
     <Compile Include="Models\Quan_ly_sinh_vien_5_totContext.cs" />
     <Compile Include="Models\SinhVien.cs" />
+    <Compile Include="Models\SinhVienSeeder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

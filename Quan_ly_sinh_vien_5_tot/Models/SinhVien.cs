@@ -14,9 +14,9 @@ namespace Quan_ly_sinh_vien_5_tot.Models
         [StringLength(10)]
         [Column(TypeName="char")]
         public virtual string MSSV { get; set; }
-        public virtual string MaLop { get; set; }
         public virtual string Ho { get; set; }
         public virtual string Ten { get; set; }
+        [DataType(DataType.Date)]
         public virtual DateTime NgaySinh { get; set; }
         public virtual Lop Lop { get; set; }
     }

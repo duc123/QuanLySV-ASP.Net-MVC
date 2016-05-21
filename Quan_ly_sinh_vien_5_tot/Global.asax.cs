@@ -12,6 +12,7 @@ namespace Quan_ly_sinh_vien_5_tot
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new Quan_ly_sinh_vien_5_tot.Models.SinhVienSeeder());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
