@@ -20,7 +20,6 @@ D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsof
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\EntityFramework.dll
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
-D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Quan_ly_sinh_vien_5_tot.pdb
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Newtonsoft.Json.xml
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\System.Web.Helpers.xml
@@ -38,7 +37,6 @@ D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsof
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\EntityFramework.xml
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
-D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\obj\Debug\Quan_ly_sinh_vien_5_tot.Tests.csprojResolveAssemblyReference.cache
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\obj\Debug\Quan_ly_sinh_vien_5_tot.Tests.dll
 D:\DACS\Quan_ly_sinh_vien_5_tot\Quan_ly_sinh_vien_5_tot.Tests\obj\Debug\Quan_ly_sinh_vien_5_tot.Tests.pdb

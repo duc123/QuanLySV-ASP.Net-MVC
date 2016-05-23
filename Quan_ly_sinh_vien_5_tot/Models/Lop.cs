@@ -12,8 +12,9 @@ namespace Quan_ly_sinh_vien_5_tot.Models
         public virtual int LopId { get; set; }
         [StringLength(10)]
         [Column(TypeName="char")]
+        [Index(IsUnique=true)]
         public virtual string MaLop { get; set; }
-        public virtual string TenLop { get; set; }
+        public virtual string LoaiLop { get; set; }
         public virtual List<SinhVien> SinhViens { get; set; }
     }
 }

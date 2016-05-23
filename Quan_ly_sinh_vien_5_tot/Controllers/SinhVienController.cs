@@ -18,6 +18,7 @@ namespace Quan_ly_sinh_vien_5_tot.Controllers
         public ActionResult Index()
         {
             var sinhviens = db.SinhViens.Include(s => s.Lop);
+            ViewBag.LoaiLop = new SelectList(db.Lops,"LoaiLop","LoaiLop");
             return View(sinhviens.ToList());
         }
 

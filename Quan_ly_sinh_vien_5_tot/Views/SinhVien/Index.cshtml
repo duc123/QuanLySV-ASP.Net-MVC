@@ -1,18 +1,33 @@
 ﻿@model IEnumerable<Quan_ly_sinh_vien_5_tot.Models.SinhVien>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Trang Chu";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br/>
+<div class="form-inline">
+    <form>
+        @Html.DropDownList("LoaiLop", null, "Loai Lop", new { @class = "form-control" }) 
+        <input type="text"  class="form-control" name="MSSV"/>
+        <input type="submit" value="Tìm kiếm" class="btn btn-primary">
+    </form>
+</div>
+<div class="text-right">
+    <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa chọn</button>
+    <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>Thêm mới</button>
+</div>
+<br/>
+<hr/>
+<label>Kết quả tìm kiếm:<span></span></label>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Lop.LopId)
+            <input type="checkbox">
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SinhVienId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lop.MaLop)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.MSSV)
@@ -32,7 +47,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Lop.LopId)
+            <input type="checkbox">
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SinhVienId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lop.MaLop)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MSSV)
@@ -47,9 +68,8 @@
             @Html.DisplayFor(modelItem => item.NgaySinh)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SinhVienId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SinhVienId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SinhVienId })
+            @Html.ActionLink("Sửa", "Edit", new { id=item.SinhVienId }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.SinhVienId })
         </td>
     </tr>
 }

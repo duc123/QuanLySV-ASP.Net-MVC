@@ -5,13 +5,13 @@ using System.Web;
 
 namespace Quan_ly_sinh_vien_5_tot.Models
 {
-    public class SinhVienSeeder : System.Data.Entity.DropCreateDatabaseIfModelChanges<Quan_ly_sinh_vien_5_totContext>
+    public class SinhVienSeeder : System.Data.Entity.DropCreateDatabaseAlways<Quan_ly_sinh_vien_5_totContext>
     {
         protected override void Seed(Quan_ly_sinh_vien_5_totContext context)
         {
             context.SinhViens.Add(new SinhVien
             {
-                Lop = new Lop { MaLop = "13DTH10" , TenLop = "Dai Hoc"},
+                Lop = new Lop { MaLop = "13DTH10" , LoaiLop = "Dai Hoc"},
                 Ho = "Phan Nguyen Hong",
                 Ten = "Duc",
                 NgaySinh = new DateTime(1994,6,9),
