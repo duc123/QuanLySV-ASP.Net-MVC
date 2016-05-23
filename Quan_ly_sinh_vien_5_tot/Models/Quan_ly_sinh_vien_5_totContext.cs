@@ -24,16 +24,30 @@ namespace Quan_ly_sinh_vien_5_tot.Models
 
         public System.Data.Entity.DbSet<Quan_ly_sinh_vien_5_tot.Models.Lop> Lops { get; set; }
 
-        public void ThemSinhVien(string MaLop,string MSSV, string Ho,string Ten,DateTime NgaySinh) {
+        public void ThemSinhVien(string MaLop,string LoaiLop,string MSSV, string Ho,string Ten,DateTime NgaySinh) {
             SqlParameter[] param = {
                 new SqlParameter("@MaLop",MaLop),
+                new SqlParameter("@LoaiLop",LoaiLop),
                 new SqlParameter("@MSSV",MSSV),
                 new SqlParameter("@Ho",Ho),
                 new SqlParameter("@Ten",Ten),
                 new SqlParameter("@NgaySinh",NgaySinh)
             };
 
-            this.Database.SqlQuery<SinhVien>("ThemSinhVien", param);
+            //var a = this.Database.SqlQuery<int>("exec ThemSinhVien @MaLop,@LoaiLop,@MSSV,@Ho,@Ten,@NgaySinh", param);
+            this.Database.ExecuteSqlCommand("exec ThemSinhVien @MaLop,@LoaiLop,@MSSV,@Ho,@Ten,@NgaySinh", param);
+            //var b = this.SinhViens.SqlQuery("exec ThemSinhVien @MaLop,@LoaiLop,@MSSV,@Ho,@Ten,@NgaySinh", param).ToList<SinhVien>();
+            /*try
+            {
+                foreach (var item in a)
+                {
+                }
+            }
+            catch (Exception)
+            {
+                
+            }*/
+            
         }
     
     }

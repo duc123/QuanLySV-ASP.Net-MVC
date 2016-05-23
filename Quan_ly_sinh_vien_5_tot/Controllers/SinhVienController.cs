@@ -49,19 +49,22 @@ namespace Quan_ly_sinh_vien_5_tot.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="SinhVienId,LopId,MSSV,Ho,Ten,NgaySinh")] SinhVien sinhvien)
+        public ActionResult Create(FormCollection values)
         {
             if (ModelState.IsValid)
             {
-                
+                var LoaiLop = values["Lop.LoaiLop"];
+                var MaLop = values["Lop.MaLop"];
+                var MSSV = values["MSSV"];
+                var Ho = values["Ho"];
+                var Ten = values["Ten"];
+                var NgaySinh = DateTime.Parse(values["NgaySinh"]);
                 //db.SinhViens.Add(sinhvien);
                 //db.SaveChanges();
-                db.ThemSinhVien(sinhvien.Lop.MaLop,sinhvien.MSSV,sinhvien.Ho,sinhvien.Ten,sinhvien.NgaySinh);
+                db.ThemSinhVien(MaLop,LoaiLop,MSSV,Ho,Ten,NgaySinh);
                 return RedirectToAction("Index");
             }
-
-            ViewBag.LopId = new SelectList(db.Lops, "LopId", "LopId", sinhvien.LopId);
-            return View(sinhvien);
+            return View();
         }
 
         // GET: /SinhVien/Edit/5

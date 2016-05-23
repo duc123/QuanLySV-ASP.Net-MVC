@@ -11,9 +11,9 @@ namespace Quan_ly_sinh_vien_5_tot.Models
         {
             context.SinhViens.Add(new SinhVien
             {
-                Lop = new Lop { MaLop = "13DTH10" , LoaiLop = "Dai Hoc"},
-                Ho = "Phan Nguyen Hong",
-                Ten = "Duc",
+                Lop = new Lop { MaLop = "13DTH10" , LoaiLop = "Đại Học"},
+                Ho = "Phan Nguyễn Hồng",
+                Ten = "Đức",
                 NgaySinh = new DateTime(1994,6,9),
                 MSSV = "1311060464"
             });
