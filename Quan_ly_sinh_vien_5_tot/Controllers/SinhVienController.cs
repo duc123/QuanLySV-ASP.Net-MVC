@@ -85,7 +85,6 @@ namespace Quan_ly_sinh_vien_5_tot.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LopId = new SelectList(db.Lops, "LopId", "LopId", sinhvien.LopId);
             return View(sinhvien);
         }
 

@@ -5,3 +5,5 @@
 + Thêm chức năng xóa theo chọn checkbox
 + Sửa tìm kiếm cho phép hiện ra đầy đủ
 + Sửa tìm kiếm chỉ cần theo MSSV không theo LoaiLop
++ Thêm chức năng sửa
++ Thêm chức năng xóa đồng loạt

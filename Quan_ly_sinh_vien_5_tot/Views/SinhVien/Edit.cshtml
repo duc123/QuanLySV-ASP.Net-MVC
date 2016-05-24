@@ -12,23 +12,35 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>SinhVien</h4>
+        <h4>Sinh Viên</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.SinhVienId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.LopId, "LopId", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Lop.LoaiLop, "Loại Lớp", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("LopId", String.Empty)
-                @Html.ValidationMessageFor(model => model.LopId)
+                <select class="form-control" name="Lop.LoaiLop">
+                    <option value="Đại Học" selected="selected">Đại Học</option>
+                    <option value="Cao Đẳng">Cao Đẳng</option>
+                    <option value="Cao Đẳng Thực Hành">Cao Đẳng Thực Hành</option>
+                </select>
+                @Html.ValidationMessageFor(m => m.Lop.LoaiLop)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lop.MaLop, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(m => m.Lop.MaLop, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Lop.MaLop)
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.MSSV, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.MSSV)
+                @Html.EditorFor(model => model.MSSV, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MSSV)
             </div>
         </div>
@@ -36,7 +48,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Ho, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Ho)
+                @Html.EditorFor(model => model.Ho, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Ho)
             </div>
         </div>
@@ -44,7 +56,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Ten, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Ten)
+                @Html.EditorFor(model => model.Ten, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Ten)
             </div>
         </div>
@@ -52,14 +64,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NgaySinh, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NgaySinh)
+                @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NgaySinh)
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Lưu" class="btn btn-primary" />
             </div>
         </div>
     </div>

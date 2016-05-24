@@ -17,14 +17,16 @@
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(m => m.Lop.LoaiLop, new { @class="control-label col-md-2"})
+            @Html.LabelFor(m => m.Lop.LoaiLop,"Loại Lớp", new { @class="control-label col-md-2"})
             <div class="col-md-10">
                 <select class="form-control" name="Lop.LoaiLop">
                     <option value="Đại Học" selected="selected">Đại Học</option>
                     <option value="Cao Đẳng">Cao Đẳng</option>
                     <option value="Cao Đẳng Thực Hành">Cao Đẳng Thực Hành</option>
                 </select>
+                @Html.ValidationMessageFor(m => m.Lop.LoaiLop)
             </div>
+            
         </div>
 
         <div class="form-group">
