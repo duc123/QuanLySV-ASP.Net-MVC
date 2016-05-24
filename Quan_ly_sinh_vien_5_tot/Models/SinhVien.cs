@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Quan_ly_sinh_vien_5_tot.Models
@@ -17,6 +18,7 @@ namespace Quan_ly_sinh_vien_5_tot.Models
         [Display(Name="MSSV")]
         [Index(IsUnique=true)]
         [Required(ErrorMessage="Cần nhập mã số sinh viên")]
+        [Remote("mssvDaTonTai","SinhVien",HttpMethod="POST",ErrorMessage="Mã số sinh viên đã tồn tại")]
         public virtual string MSSV { get; set; }
         [Display(Name="Họ")]
         [Column(TypeName="nchar")]

@@ -67,6 +67,12 @@ namespace Quan_ly_sinh_vien_5_tot.Controllers
             return View();
         }
 
+        [HttpPost]
+        public JsonResult mssvDaTonTai(string MSSV) {
+            var user = db.SinhViens.Any(s => s.MSSV.Equals(MSSV,StringComparison.OrdinalIgnoreCase));
+            return Json(!user);
+        }
+
         // GET: /SinhVien/Edit/5
         public ActionResult Edit(int? id)
         {
