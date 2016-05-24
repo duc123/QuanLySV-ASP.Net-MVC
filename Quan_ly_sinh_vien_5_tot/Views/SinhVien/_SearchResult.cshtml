@@ -1,36 +1,5 @@
 ﻿@model IEnumerable<Quan_ly_sinh_vien_5_tot.Models.SinhVien>
 
-@{
-    ViewBag.Title = "Trang Chu";
-}
-<br />
-<script type="text/javascript">
-    function searchFailed() {
-        $("#searchresult").html("Xin lỗi, có vấn đề về câu truy vấn của bạn");
-    }
-</script>
-<div class="form-inline">
-    @using (Ajax.BeginForm("SinhVienSearch", "SinhVien", new AjaxOptions
-    {
-        InsertionMode = InsertionMode.Replace,
-        HttpMethod = "GET",
-        OnFailure = "searchFailed",
-        LoadingElementId = "ajax-loader",
-        UpdateTargetId = "searchresult"
-    }))
-    {
-        @Html.DropDownList("LoaiLop", null, "Loai Lop", new { @class = "form-control" })
-        <input type="text" class="form-control" name="MSSV" />
-        <input type="submit" value="Tìm kiếm" class="btn btn-primary">
-    }
-</div>
-<div class="text-right">
-    <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa chọn</button>
-    <button type="button" class="btn btn-success" onclick="window.location.href='Create'"><span class="glyphicon glyphicon-plus"></span>Thêm mới</button>
-</div>
-<br />
-<hr />
-<label>Kết quả tìm kiếm:<span></span></label>
 <div id="searchresult">
     <table class="table">
         <tr>
@@ -91,8 +60,3 @@
 
     </table>
 </div>
-
-@section Scripts{
-
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-}

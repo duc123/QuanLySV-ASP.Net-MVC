@@ -132,6 +132,16 @@ namespace Quan_ly_sinh_vien_5_tot.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult SinhVienSearch(string LoaiLop,string MSSV) {
+            var sinhviens = GetSinhViens(LoaiLop,MSSV);
+            return PartialView("_SearchResult",sinhviens);
+        }
+
+        private List<SinhVien> GetSinhViens(string LoaiLop,string MSSV) {
+            return db.SinhViens.Where(s => s.MSSV.Equals(MSSV, StringComparison.OrdinalIgnoreCase) 
+                && s.Lop.LoaiLop.Equals(LoaiLop, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
